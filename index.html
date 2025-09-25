@@ -14,22 +14,24 @@
         body {
             font-family: 'Georgia', serif;
             line-height: 1.6;
-            color: #333;
-            background: #fff;
+            color: white;
+            background: #6B2D3C;
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23ff6b6b" width="1200" height="800"/><circle fill="%23ffffff" opacity="0.1" cx="200" cy="200" r="100"/><circle fill="%23ffffff" opacity="0.1" cx="800" cy="600" r="150"/><circle fill="%23ffffff" opacity="0.1" cx="1000" cy="300" r="80"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(107, 45, 60, 0.9), rgba(107, 45, 60, 0.9)), 
+                        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                        #6B2D3C;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
+            position: relative;
+            overflow: hidden;
         }
 
         .hero-content h1 {
@@ -72,6 +74,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 0 2rem;
+            background: #6B2D3C;
         }
 
         /* Scroll Sections */
@@ -83,6 +86,7 @@
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.8s ease;
+            background: #6B2D3C;
         }
 
         .scroll-section.visible {
@@ -98,82 +102,89 @@
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 2rem;
-            color: #2c3e50;
+            color: white;
         }
 
         .section-text {
             font-size: 1.2rem;
             margin-bottom: 3rem;
             line-height: 1.8;
+            color: #F5F5F5;
         }
 
         /* Visualization Containers */
         .viz-container {
             width: 100%;
             height: 500px;
-            background: #f8f9fa;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 2rem;
             margin: 2rem 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid #e9ecef;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
         }
 
         .chart-placeholder {
             text-align: center;
-            color: #6c757d;
+            color: white;
         }
 
         .chart-placeholder h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #495057;
+            color: white;
         }
 
-        /* Specific visualizations */
+        .chart-placeholder ul {
+            color: #F5F5F5;
+        }
+
+        /* Specific visualizations with subtle color variations */
         .trend-chart {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 100%);
+            border-color: rgba(255,255,255,0.3);
         }
 
         .country-comparison {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.06) 100%);
+            border-color: rgba(255,255,255,0.25);
         }
 
         .gap-visualization {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.1) 100%);
+            border-color: rgba(255,255,255,0.35);
         }
 
         .media-correlation {
-            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-            color: white;
+            background: linear-gradient(135deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.07) 100%);
+            border-color: rgba(255,255,255,0.28);
         }
 
         /* Statistics highlighting */
         .stat-highlight {
-            background: #fff3cd;
-            border: 2px solid #ffeaa7;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 8px;
             padding: 2rem;
             margin: 2rem 0;
             text-align: center;
+            backdrop-filter: blur(10px);
         }
 
         .stat-number {
             font-size: 3rem;
             font-weight: bold;
-            color: #e17055;
+            color: #FFE5E5;
             display: block;
         }
 
         .stat-description {
             font-size: 1.1rem;
-            color: #636e72;
+            color: #F5F5F5;
             margin-top: 0.5rem;
         }
 
@@ -186,58 +197,88 @@
         }
 
         .country-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.12);
             border-radius: 10px;
             padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border-left: 5px solid #e17055;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            border-left: 5px solid #FFE5E5;
             transition: transform 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .country-card:hover {
             transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.18);
         }
 
         .country-name {
             font-size: 1.3rem;
             font-weight: bold;
-            color: #2d3436;
+            color: white;
             margin-bottom: 1rem;
         }
 
         .gap-amount {
             font-size: 1.5rem;
-            color: #e17055;
+            color: #FFE5E5;
             font-weight: bold;
+        }
+
+        .country-card p {
+            color: #F5F5F5;
+        }
+
+        /* Section headings */
+        h3 {
+            color: white;
+            margin: 2rem 0 1rem;
+        }
+
+        .largest-gaps h3 {
+            color: #FFB3B3;
+        }
+
+        .smallest-gaps h3 {
+            color: #B3FFB3;
         }
 
         /* Call to action */
         .cta-section {
-            background: #2d3436;
+            background: rgba(107, 45, 60, 0.95);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
             margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
+            color: white;
+        }
+
+        .cta-section p {
+            color: #F5F5F5;
         }
 
         .cta-button {
             display: inline-block;
-            background: #00b894;
+            background: rgba(255, 255, 255, 0.2);
             color: white;
             padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.1rem;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
         }
 
         .cta-button:hover {
-            background: #00a085;
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
         }
 
         /* Animations */
@@ -335,7 +376,7 @@
 
                 <div class="viz-container trend-chart">
                     <div class="chart-placeholder">
-                        <h3>📈 Funding Gap Trends 2014-2024</h3>
+                        <h3>Funding Gap Trends 2014-2024</h3>
                         <p>Line chart showing:</p>
                         <ul style="text-align: left; max-width: 300px;">
                             <li>Aid required vs. aid provided</li>
@@ -359,47 +400,51 @@
                     Not all disasters are treated equally. The data reveals stark inequalities in who receives adequate help and who is left behind.
                 </p>
 
-                <h3 style="color: #e74c3c; font-size: 1.5rem; margin: 2rem 0 1rem;">Largest Aid Gaps (2014-2024)</h3>
-                <div class="country-cards">
-                    <div class="country-card">
-                        <div class="country-name">🇸🇾 Syria</div>
-                        <div class="gap-amount">$15.2B gap</div>
-                        <p>Chronic conflict, limited access</p>
-                    </div>
-                    <div class="country-card">
-                        <div class="country-name">🇦🇫 Afghanistan</div>
-                        <div class="gap-amount">$8.7B gap</div>
-                        <p>Political restrictions, donor fatigue</p>
-                    </div>
-                    <div class="country-card">
-                        <div class="country-name">🇪🇹 Ethiopia</div>
-                        <div class="gap-amount">$6.8B gap</div>
-                        <p>Recurring droughts, large population</p>
+                <div class="largest-gaps">
+                    <h3 style="color: #FFB3B3; font-size: 1.5rem; margin: 2rem 0 1rem;">Largest Aid Gaps (2014-2024)</h3>
+                    <div class="country-cards">
+                        <div class="country-card">
+                            <div class="country-name">Syria</div>
+                            <div class="gap-amount">$15.2B gap</div>
+                            <p>Chronic conflict, limited access</p>
+                        </div>
+                        <div class="country-card">
+                            <div class="country-name">Afghanistan</div>
+                            <div class="gap-amount">$8.7B gap</div>
+                            <p>Political restrictions, donor fatigue</p>
+                        </div>
+                        <div class="country-card">
+                            <div class="country-name">Ethiopia</div>
+                            <div class="gap-amount">$6.8B gap</div>
+                            <p>Recurring droughts, large population</p>
+                        </div>
                     </div>
                 </div>
 
-                <h3 style="color: #00b894; font-size: 1.5rem; margin: 2rem 0 1rem;">Best Funded Responses</h3>
-                <div class="country-cards">
-                    <div class="country-card" style="border-left-color: #00b894;">
-                        <div class="country-name">🇩🇪 Germany</div>
-                        <div class="gap-amount">95% funded</div>
-                        <p>Strong domestic capacity</p>
-                    </div>
-                    <div class="country-card" style="border-left-color: #00b894;">
-                        <div class="country-name">🇯🇵 Japan</div>
-                        <div class="gap-amount">94% funded</div>
-                        <p>Disaster-prepared infrastructure</p>
-                    </div>
-                    <div class="country-card" style="border-left-color: #00b894;">
-                        <div class="country-name">🇳🇿 New Zealand</div>
-                        <div class="gap-amount">94% funded</div>
-                        <p>Efficient response systems</p>
+                <div class="smallest-gaps">
+                    <h3 style="color: #B3FFB3; font-size: 1.5rem; margin: 2rem 0 1rem;">Best Funded Responses</h3>
+                    <div class="country-cards">
+                        <div class="country-card" style="border-left-color: #B3FFB3;">
+                            <div class="country-name">Germany</div>
+                            <div class="gap-amount">95% funded</div>
+                            <p>Strong domestic capacity</p>
+                        </div>
+                        <div class="country-card" style="border-left-color: #B3FFB3;">
+                            <div class="country-name">Japan</div>
+                            <div class="gap-amount">94% funded</div>
+                            <p>Disaster-prepared infrastructure</p>
+                        </div>
+                        <div class="country-card" style="border-left-color: #B3FFB3;">
+                            <div class="country-name">New Zealand</div>
+                            <div class="gap-amount">94% funded</div>
+                            <p>Efficient response systems</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="viz-container country-comparison">
                     <div class="chart-placeholder">
-                        <h3>🌍 Global Aid Inequality Map</h3>
+                        <h3>Global Aid Inequality Map</h3>
                         <p>World map visualization showing:</p>
                         <ul style="text-align: left; max-width: 300px;">
                             <li>Funding rates by country (color-coded)</li>
@@ -421,7 +466,7 @@
 
                 <div class="viz-container gap-visualization">
                     <div class="chart-placeholder">
-                        <h3>📊 The Widening Gap</h3>
+                        <h3>The Widening Gap</h3>
                         <p>Before vs. After comparison:</p>
                         <ul style="text-align: left; max-width: 350px;">
                             <li><strong>2014-2017:</strong> 59% average funding</li>
@@ -453,7 +498,7 @@
 
                 <div class="viz-container media-correlation">
                     <div class="chart-placeholder">
-                        <h3>📺 Coverage vs. Funding</h3>
+                        <h3>Coverage vs. Funding</h3>
                         <p>Scatter plot analysis showing:</p>
                         <ul style="text-align: left; max-width: 300px;">
                             <li>Media mentions (x-axis) vs. Aid received (y-axis)</li>
