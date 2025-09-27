@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Silent Crisis: How Media Coverage Determines Who Gets Help When Disaster Strikes</title>
+    <title>The Financial Aftershocks: How Media Coverage Determines Who Gets Aid When Disaster Strikes</title>
     <style>
         * {
             margin: 0;
@@ -15,7 +15,7 @@
             font-family: 'Georgia', serif;
             line-height: 1.6;
             color: white;
-            background: #6B2D3C;
+            background: #000;
         }
 
         /* Disaster Intro Section */
@@ -32,36 +32,43 @@
 
         .disaster-images {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
+            width: 100%;
+            height: 80vh;
             opacity: 0;
             animation: fadeInUp 2s ease forwards 0.5s;
         }
 
         .disaster-image {
-            width: 250px;
-            height: 200px;
-            border-radius: 10px;
+            flex: 1;
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(255,255,255,0.1);
             transition: transform 0.3s ease;
         }
 
         .disaster-image:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         .disaster-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
         }
 
         .disaster-text {
+            position: absolute;
+            bottom: 8vh;
+            left: 0;
+            right: 0;
+            width: 100%;
             opacity: 0;
             animation: fadeInUp 2s ease forwards 1s;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
         }
 
         .disaster-text h2 {
@@ -69,7 +76,7 @@
             font-weight: bold;
             color: white;
             text-align: center;
-            margin-bottom: 2rem;
+            margin: 0;
         }
 
         /* Hero Section */
@@ -88,23 +95,31 @@
             overflow: hidden;
         }
 
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
         .hero-content h1 {
             font-size: 3.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
             opacity: 0;
             animation: fadeInUp 1s ease forwards 0.5s;
+            margin-top: -45vh;
         }
 
         .hero-content p {
             font-size: 1.4rem;
             max-width: 800px;
-            margin: 0 auto 2rem;
+            margin: 0 auto;
             opacity: 0;
             animation: fadeInUp 1s ease forwards 1s;
         }
 
-        .scroll-indicator {
+        .hero .scroll-indicator {
             position: absolute;
             bottom: 30px;
             left: 50%;
@@ -350,16 +365,20 @@
         @media (max-width: 768px) {
             .disaster-images {
                 flex-direction: column;
-                gap: 1rem;
+                height: 70vh;
             }
             
             .disaster-image {
-                width: 200px;
-                height: 150px;
+                flex: 1;
+            }
+            
+            .disaster-text {
+                bottom: 5vh;
+                padding: 1.5rem 2rem;
             }
             
             .disaster-text h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .hero-content h1 {
@@ -391,28 +410,30 @@
     <section class="disaster-intro">
         <div class="disaster-images">
             <div class="disaster-image">
-                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><radialGradient id='fire' cx='50%25' cy='80%25' r='60%25'><stop offset='0%25' stop-color='%23ff6b35'/><stop offset='40%25' stop-color='%23ff8e3c'/><stop offset='70%25' stop-color='%23d62828'/><stop offset='100%25' stop-color='%23000'/></radialGradient></defs><rect width='800' height='600' fill='%23000'/><ellipse cx='400' cy='500' rx='350' ry='200' fill='url(%23fire)'/><rect x='50' y='300' width='8' height='200' fill='%232c1810'/><rect x='150' y='250' width='12' height='250' fill='%232c1810'/><rect x='300' y='200' width='10' height='300' fill='%232c1810'/><rect x='450' y='180' width='15' height='320' fill='%232c1810'/><rect x='600' y='280' width='8' height='220' fill='%232c1810'/><rect x='700' y='320' width='6' height='180' fill='%232c1810'/></svg>" alt="Wildfire devastation">
+                <img src="data:image/svg+xml,<svg xmlns='https://raw.githubusercontent.com/SharmilNK/Disaster-Aid-Gaps/main/images/Tornado.png' viewBox='0 0 800 600'><defs><radialGradient id='fire' cx='50%25' cy='80%25' r='60%25'><stop offset='0%25' stop-color='%23ff6b35'/><stop offset='40%25' stop-color='%23ff8e3c'/><stop offset='70%25' stop-color='%23d62828'/><stop offset='100%25' stop-color='%23000'/></radialGradient></defs><rect width='800' height='600' fill='%23000'/><ellipse cx='400' cy='500' rx='350' ry='200' fill='url(%23fire)'/><rect x='50' y='300' width='8' height='200' fill='%232c1810'/><rect x='150' y='250' width='12' height='250' fill='%232c1810'/><rect x='300' y='200' width='10' height='300' fill='%232c1810'/><rect x='450' y='180' width='15' height='320' fill='%232c1810'/><rect x='600' y='280' width='8' height='220' fill='%232c1810'/><rect x='700' y='320' width='6' height='180' fill='%232c1810'/></svg>" alt="Wildfire devastation">
             </div>
             <div class="disaster-image">
-                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><radialGradient id='tornado' cx='50%25' cy='20%25' r='80%25'><stop offset='0%25' stop-color='%23495057'/><stop offset='60%25' stop-color='%23343a40'/><stop offset='100%25' stop-color='%23212529'/></radialGradient><linearGradient id='ground' x1='0%25' y1='0%25' x2='0%25' y2='100%25'><stop offset='0%25' stop-color='%238d5524'/><stop offset='100%25' stop-color='%236f4518'/></linearGradient></defs><rect width='800' height='600' fill='url(%23tornado)'/><polygon points='350,100 450,100 420,300 400,450 380,300' fill='%23adb5bd' opacity='0.8'/><polygon points='380,300 420,300 410,400 400,450 390,400' fill='%23868e96' opacity='0.9'/><rect x='0' y='400' width='800' height='200' fill='url(%23ground)'/><rect x='100' y='380' width='40' height='20' fill='%23495057'/><rect x='200' y='390' width='30' height='15' fill='%23495057'/><rect x='350' y='385' width='25' height='18' fill='%23495057'/><rect x='500' y='375' width='35' height='25' fill='%23495057'/><rect x='650' y='390' width='20' height='12' fill='%23495057'/></svg>" alt="Tornado destroying communities">
+                <img src="data:image/svg+xml,<svg xmlns='https://raw.githubusercontent.com/SharmilNK/Disaster-Aid-Gaps/main/images/Drought.png' viewBox='0 0 800 600'><defs><radialGradient id='tornado' cx='50%25' cy='20%25' r='80%25'><stop offset='0%25' stop-color='%23495057'/><stop offset='60%25' stop-color='%23343a40'/><stop offset='100%25' stop-color='%23212529'/></radialGradient><linearGradient id='ground' x1='0%25' y1='0%25' x2='0%25' y2='100%25'><stop offset='0%25' stop-color='%238d5524'/><stop offset='100%25' stop-color='%236f4518'/></linearGradient></defs><rect width='800' height='600' fill='url(%23tornado)'/><polygon points='350,100 450,100 420,300 400,450 380,300' fill='%23adb5bd' opacity='0.8'/><polygon points='380,300 420,300 410,400 400,450 390,400' fill='%23868e96' opacity='0.9'/><rect x='0' y='400' width='800' height='200' fill='url(%23ground)'/><rect x='100' y='380' width='40' height='20' fill='%23495057'/><rect x='200' y='390' width='30' height='15' fill='%23495057'/><rect x='350' y='385' width='25' height='18' fill='%23495057'/><rect x='500' y='375' width='35' height='25' fill='%23495057'/><rect x='650' y='390' width='20' height='12' fill='%23495057'/></svg>" alt="Tornado destroying communities">
             </div>
             <div class="disaster-image">
-                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><pattern id='cracks' patternUnits='userSpaceOnUse' width='40' height='40'><path d='M0,20 Q10,10 20,20 T40,20' stroke='%23654321' stroke-width='2' fill='none'/><path d='M20,0 Q30,10 20,20 T20,40' stroke='%23654321' stroke-width='2' fill='none'/></defs></defs><rect width='800' height='600' fill='%23deb887'/><rect width='800' height='600' fill='url(%23cracks)'/><path d='M100,200 Q200,150 300,200 T500,200 Q600,180 700,200' stroke='%23f5f5dc' stroke-width='15' fill='none'/><path d='M150,400 Q250,350 350,400 T550,400 Q650,380 750,400' stroke='%23f5f5dc' stroke-width='12' fill='none'/><circle cx='200' cy='100' r='3' fill='%23654321'/><circle cx='450' cy='150' r='2' fill='%23654321'/><circle cx='600' cy='80' r='4' fill='%23654321'/></svg>" alt="Drought and water scarcity">
+                <img src="data:image/svg+xml,<svg xmlns='https://raw.githubusercontent.com/SharmilNK/Disaster-Aid-Gaps/main/images/Fire.png' viewBox='0 0 800 600'><defs><pattern id='cracks' patternUnits='userSpaceOnUse' width='40' height='40'><path d='M0,20 Q10,10 20,20 T40,20' stroke='%23654321' stroke-width='2' fill='none'/><path d='M20,0 Q30,10 20,20 T20,40' stroke='%23654321' stroke-width='2' fill='none'/></defs></defs><rect width='800' height='600' fill='%23deb887'/><rect width='800' height='600' fill='url(%23cracks)'/><path d='M100,200 Q200,150 300,200 T500,200 Q600,180 700,200' stroke='%23f5f5dc' stroke-width='15' fill='none'/><path d='M150,400 Q250,350 350,400 T550,400 Q650,380 750,400' stroke='%23f5f5dc' stroke-width='12' fill='none'/><circle cx='200' cy='100' r='3' fill='%23654321'/><circle cx='450' cy='150' r='2' fill='%23654321'/><circle cx='600' cy='80' r='4' fill='%23654321'/></svg>" alt="Drought and water scarcity">
             </div>
         </div>
         <div class="disaster-text">
-            <h2>When Disaster Strikes</h2>
+            <h2>Long After the Disaster, the Relief never followed.</h2>
         </div>
         <div class="scroll-indicator">
             <div class="scroll-arrow"></div>
         </div>
     </section>
 
+
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>The Silent Crisis</h1>
-            <p>How media coverage determines who gets help when disaster strikes</p>
+            <h1>The Financial Aftershocks</h1>
+            <p>How Media Coverage Determines Who Gets Aid When Disaster Strikes</p>
             <div class="scroll-indicator">
                 <div class="scroll-arrow"></div>
             </div>
@@ -429,10 +450,10 @@
                     In February 2023, a devastating earthquake struck Turkey and Syria. Within weeks, international donors pledged over $7 billion in aid. The disaster dominated headlines for months.
                 </p>
                 <p class="section-text">
-                    That same year, Somalia faced its worst drought in decades. Eight million people needed urgent assistance. The funding appeal received less than 30% of what was requested. The story barely made international news.
+                    That same year, Somalia faced its worst drought in decades. Eight million people needed urgent assistance. Yet, the funding appeal received less than 30% of what was requested. Was it because their story barely made international news?
                 </p>
                 <p class="section-text">
-                    What made the difference? We analyzed a decade of disaster data to uncover a troubling pattern: <strong>media attention, not human need, often determines who gets help.</strong>
+                    We analyzed a decade (2014-2024) of global disaster data to uncover a troubling pattern: <strong>media attention, not human need, often determines who gets help.</strong>
                 </p>
             </div>
         </section>
@@ -442,12 +463,12 @@
             <div class="section-content">
                 <h2 class="section-title">The Growing Crisis</h2>
                 <p class="section-text">
-                    Over the past decade, the gap between disaster funding needs and actual aid has grown dramatically. While human suffering has increased, our collective response has weakened.
+                    Over the last decade, disaster funding needs have soared while actual aid has lagged far behind. Left devastated by death and destruction, communities reach for relief,—only to be met with silence. As the scale of their struggles expand, the world’s willingness and ability to respond is eerily diminishing.
                 </p>
                 
                 <div class="stat-highlight">
                     <span class="stat-number">$145B</span>
-                    <p class="stat-description">Total humanitarian funding shortfall over the past decade</p>
+                    <p class="stat-description">Total humanitarian funding shortfall over the past decade (2014-2024)</p>
                 </div>
 
                 <div class="viz-container">
@@ -498,7 +519,7 @@
                 </div>
 
                 <p class="section-text">
-                    In 2014, humanitarian appeals were funded at an average of 59%. By 2023, this had dropped to just 45% - the lowest coverage on record. The 2024 projections are even worse, with funding expected to fall by another 11%.
+                    In 2014, humanitarian appeals were funded at an average of 59%. By 2023, this dropped to just 45% - the lowest coverage on record. The projections for 2024 were even worse, with funding expected to fall by another 11%.
                 </p>
             </div>
         </section>
@@ -509,6 +530,8 @@
                 <h2 class="section-title">A World Divided</h2>
                 <p class="section-text">
                     Not all disasters are treated equally. The data reveals stark inequalities in who receives adequate help and who is left behind.
+                    Low relief in many countries stems from ongoing instability, repeated crises and the sheer scale of vulnerable populations.
+                    Countries with stronger systems, better infrastructure and capacity are able to secure and deliver aid more effectively.
                 </p>
 
                 <div style="color: #FFB3B3; font-size: 1.5rem; margin: 2rem 0 1rem; font-weight: bold;">Largest Aid Gaps (2014-2024)</div>
@@ -688,11 +711,11 @@
 
                 <div class="stat-highlight">
                     <span class="stat-number">311M</span>
-                    <p class="stat-description">People needing humanitarian aid in 2024 - but only 60% are being targeted</p>
+                    <p class="stat-description">people still needed humanitarian aid in 2024. Of these, only 60% are being targeted</p>
                 </div>
 
                 <p class="section-text">
-                    The reasons are complex: donor fatigue, competing priorities, more protracted crises, and economic pressures. But the result is clear - we're failing more people every year.
+                    The reasons are complex: shrinking donor interest, shifting global priorities, crises that drag on for years and mounting economic strain. Yet the outcome is undeniable: with each passing year, more people in need are left without the relief they deserve.
                 </p>
             </div>
         </section>
@@ -700,7 +723,7 @@
         <!-- Point 4: Media Coverage Correlation -->
         <section class="scroll-section">
             <div class="section-content">
-                <h2 class="section-title">The Attention Economy of Suffering</h2>
+                <h2 class="section-title">The 'Breaking News' Economy of Suffering</h2>
                 <p class="section-text">
                     Our analysis reveals a strong correlation between media coverage and aid received. Disasters that capture headlines get help. Those that don't, suffer in silence.
                 </p>
@@ -796,7 +819,7 @@
                 </div>
 
                 <p class="section-text">
-                    Earthquakes and dramatic natural disasters get extensive coverage and funding. Slow-onset crises like droughts, conflicts in remote areas, and complex emergencies struggle for attention and resources.
+                    Sudden disasters like earthquakes, floods, or hurricanes capture global headlines and attract immediate funding, as their devastation is visible and dramatic. In contrast, slow-onset crises—such as prolonged droughts, conflicts in isolated regions and drawn-out emergencies—unfold quietly, often hidden from the spotlight, leaving them underfunded and neglected despite their equally devastating impact on communities.
                 </p>
 
                 <p class="section-text">
@@ -810,10 +833,11 @@
             <div class="section-content">
                 <h2 class="section-title">Breaking the Silence</h2>
                 <p class="section-text">
-                    This data reveals an uncomfortable truth about our humanitarian system. We respond to disasters based on visibility, not vulnerability. Geographic proximity, geopolitical interests, and media attention drive aid allocation more than actual need.
+                   This data exposes an uncomfortable truth about the way humanitarian aid is delivered: our response is often shaped less by actual need and more by what the world sees.
+                    Disasters closer to major powers, crises tied to political interests, or tragedies amplified by media coverage receive attention and funding, while equally urgent emergencies in overlooked regions struggle to attract support.
                 </p>
                 <p class="section-text">
-                    But awareness is the first step toward change. By understanding these patterns, we can work to create more equitable systems that prioritize human need over headlines.
+                    But the truth is harsher: awareness alone does not fill empty stomachs, rebuild homes or bring back the dead. Until we confront these patterns, countless lives will continue to be lost in silence — forgotten not because the need is small, but because the world chooses not to see.
                 </p>
             </div>
         </section>
