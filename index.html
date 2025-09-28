@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Financial Aftershocks: How Media Coverage Determines Who Gets Aid When Disaster Strikes</title>
+    <title>The Silent Crisis: How Media Coverage Determines Who Gets Help When Disaster Strikes</title>
     <style>
         * {
             margin: 0;
@@ -12,16 +12,16 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Times New Roman', Times, serif;
             line-height: 1.6;
             color: white;
-            background: #000;
+            background: #4A1625;
         }
 
         /* Disaster Intro Section */
         .disaster-intro {
             height: 100vh;
-            background: #000;
+            background: #4A1625;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -30,62 +30,14 @@
             overflow: hidden;
         }
 
-        .disaster-images {
-            display: flex;
-            width: 100%;
-            height: 80vh;
-            opacity: 0;
-            animation: fadeInUp 2s ease forwards 0.5s;
-        }
+        
 
-        .disaster-image {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .disaster-image:hover {
-            transform: scale(1.02);
-        }
-
-        .disaster-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .disaster-text {
-            position: absolute;
-            bottom: 8vh;
-            left: 0;
-            right: 0;
-            width: 100%;
-            opacity: 0;
-            animation: fadeInUp 2s ease forwards 1s;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            border-top: 2px solid rgba(255, 255, 255, 0.2);
-            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .disaster-text h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: white;
-            text-align: center;
-            margin: 0;
-        }
+      
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(107, 45, 60, 0.9), rgba(107, 45, 60, 0.9)), 
-                        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08) 0%, transparent 50%),
-                        #6B2D3C;
+            background: #4A1625;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -108,7 +60,6 @@
             margin-bottom: 1rem;
             opacity: 0;
             animation: fadeInUp 1s ease forwards 0.5s;
-            margin-top: -45vh;
         }
 
         .hero-content p {
@@ -143,7 +94,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 0 2rem;
-            background: #6B2D3C;
+            background: #4A1625;
         }
 
         /* Scroll Sections */
@@ -155,7 +106,7 @@
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.8s ease;
-            background: #6B2D3C;
+            background: #4A1625;
         }
 
         .scroll-section.visible {
@@ -300,7 +251,7 @@
 
         /* Call to action */
         .cta-section {
-            background: rgba(107, 45, 60, 0.95);
+            background: #000;
             color: white;
             padding: 4rem 2rem;
             text-align: center;
@@ -363,24 +314,6 @@
 
         /* Responsive design */
         @media (max-width: 768px) {
-            .disaster-images {
-                flex-direction: column;
-                height: 70vh;
-            }
-            
-            .disaster-image {
-                flex: 1;
-            }
-            
-            .disaster-text {
-                bottom: 5vh;
-                padding: 1.5rem 2rem;
-            }
-            
-            .disaster-text h2 {
-                font-size: 1.8rem;
-            }
-            
             .hero-content h1 {
                 font-size: 2.5rem;
             }
@@ -407,38 +340,17 @@
 </head>
     <body>
     <!-- Opening Disaster Images Section -->
-    <section class="disaster-intro">
-        <div class="disaster-images">
-            <div class="disaster-image">
-                <img src="data:image/svg+xml,<svg xmlns='https://raw.githubusercontent.com/SharmilNK/Disaster-Aid-Gaps/main/images/Tornado.png' viewBox='0 0 800 600'><defs><radialGradient id='fire' cx='50%25' cy='80%25' r='60%25'><stop offset='0%25' stop-color='%23ff6b35'/><stop offset='40%25' stop-color='%23ff8e3c'/><stop offset='70%25' stop-color='%23d62828'/><stop offset='100%25' stop-color='%23000'/></radialGradient></defs><rect width='800' height='600' fill='%23000'/><ellipse cx='400' cy='500' rx='350' ry='200' fill='url(%23fire)'/><rect x='50' y='300' width='8' height='200' fill='%232c1810'/><rect x='150' y='250' width='12' height='250' fill='%232c1810'/><rect x='300' y='200' width='10' height='300' fill='%232c1810'/><rect x='450' y='180' width='15' height='320' fill='%232c1810'/><rect x='600' y='280' width='8' height='220' fill='%232c1810'/><rect x='700' y='320' width='6' height='180' fill='%232c1810'/></svg>" alt="Wildfire devastation">
-            </div>
-            <div class="disaster-image">
-                <img src="data:image/svg+xml,<svg xmlns='https://raw.githubusercontent.com/SharmilNK/Disaster-Aid-Gaps/main/images/Drought.png' viewBox='0 0 800 600'><defs><radialGradient id='tornado' cx='50%25' cy='20%25' r='80%25'><stop offset='0%25' stop-color='%23495057'/><stop offset='60%25' stop-color='%23343a40'/><stop offset='100%25' stop-color='%23212529'/></radialGradient><linearGradient id='ground' x1='0%25' y1='0%25' x2='0%25' y2='100%25'><stop offset='0%25' stop-color='%238d5524'/><stop offset='100%25' stop-color='%236f4518'/></linearGradient></defs><rect width='800' height='600' fill='url(%23tornado)'/><polygon points='350,100 450,100 420,300 400,450 380,300' fill='%23adb5bd' opacity='0.8'/><polygon points='380,300 420,300 410,400 400,450 390,400' fill='%23868e96' opacity='0.9'/><rect x='0' y='400' width='800' height='200' fill='url(%23ground)'/><rect x='100' y='380' width='40' height='20' fill='%23495057'/><rect x='200' y='390' width='30' height='15' fill='%23495057'/><rect x='350' y='385' width='25' height='18' fill='%23495057'/><rect x='500' y='375' width='35' height='25' fill='%23495057'/><rect x='650' y='390' width='20' height='12' fill='%23495057'/></svg>" alt="Tornado destroying communities">
-            </div>
-            <div class="disaster-image">
-                <img src="data:image/svg+xml,<svg xmlns='https://raw.githubusercontent.com/SharmilNK/Disaster-Aid-Gaps/main/images/Fire.png' viewBox='0 0 800 600'><defs><pattern id='cracks' patternUnits='userSpaceOnUse' width='40' height='40'><path d='M0,20 Q10,10 20,20 T40,20' stroke='%23654321' stroke-width='2' fill='none'/><path d='M20,0 Q30,10 20,20 T20,40' stroke='%23654321' stroke-width='2' fill='none'/></defs></defs><rect width='800' height='600' fill='%23deb887'/><rect width='800' height='600' fill='url(%23cracks)'/><path d='M100,200 Q200,150 300,200 T500,200 Q600,180 700,200' stroke='%23f5f5dc' stroke-width='15' fill='none'/><path d='M150,400 Q250,350 350,400 T550,400 Q650,380 750,400' stroke='%23f5f5dc' stroke-width='12' fill='none'/><circle cx='200' cy='100' r='3' fill='%23654321'/><circle cx='450' cy='150' r='2' fill='%23654321'/><circle cx='600' cy='80' r='4' fill='%23654321'/></svg>" alt="Drought and water scarcity">
-            </div>
-        </div>
-        <div class="disaster-text">
-            <h2>Long after the devastation<br>
-                the relief is yet to follow.</h2>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
-
-
+ 
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>The Financial Aftershocks</h1>
+            <h1>Financial Aftershocks after the Disaster</h1>
             <p>How Media Coverage Determines Who Gets Aid When Disaster Strikes</p>
+            </div>
             <div class="scroll-indicator">
                 <div class="scroll-arrow"></div>
-            </div>
-        </div>
+         </div>
     </section>
 
     <!-- Main Content -->
@@ -451,10 +363,11 @@
                     In February 2023, a devastating earthquake struck Turkey and Syria. Within weeks, international donors pledged over $7 billion in aid. The disaster dominated headlines for months.
                 </p>
                 <p class="section-text">
-                    That same year, Somalia faced its worst drought in decades. Eight million people needed urgent assistance. Yet, the funding appeal received less than 30% of what was requested. Was it because their story barely made international news?
+                    That same year, Somalia faced its worst drought in decades. Eight million people needed urgent assistance. Yet, the funding appeal received less than 30% of what was requested. <br>
+                    Was it because their story barely made international news?
                 </p>
                 <p class="section-text">
-                    We analyzed a decade (2014-2024) of global disaster data to uncover a troubling pattern: <strong>media attention, not human need, often determines who gets help.</strong>
+                    We analyzed a decade (2014-2024) of disaster data to uncover a troubling pattern: <strong>media attention, not human need, often determines who gets help.</strong>
                 </p>
             </div>
         </section>
@@ -715,7 +628,8 @@
                 <div class="stat-highlight">
                     <span class="stat-number">311M</span>
                     <p class="stat-description">people still needed humanitarian aid in 2024. <br>
-                        Of these, only 60% are being targeted.</p>
+                        Of these, only 60% are being targeted.
+                    </p>
                 </div>
 
                 <p class="section-text">
