@@ -15,9 +15,7 @@ The website combines narrative storytelling with data to shed light on:
 - The widening gap in disaster funding over the past decade.
 - The factors that drive or limit aid distribution.
 - The effect of news & media coverage on receiving aid.
-
 Note: This study uses a curated sample of 19 major humanitarian crises from 2014-2024, selected to demonstrate funding patterns across different disaster types, regions, and income levels. This is a convenience sample for exploratory analysis, not a comprehensive dataset. It does not represent all global disasters and the patterns identified are illustrative, not definitive.
----
 
 ## Features
 - **Informative visuals** – Simplifies complex data into accessible graphics.  
