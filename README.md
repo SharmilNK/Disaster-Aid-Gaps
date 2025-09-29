@@ -68,6 +68,3 @@ ReliefWeb: https://reliefweb.int/
 GDELT Project: https://www.gdeltproject.org/ 
 EM-DAT (Emergency Events Database): https://www.emdat.be/ 
 World Bank Open Data: https://data.worldbank.org/ 
-
-<img width="1129" height="689" alt="image" src="https://github.com/user-attachments/assets/e02c98a7-4073-498e-8724-00f0605fe999" />
-
