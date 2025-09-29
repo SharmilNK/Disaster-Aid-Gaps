@@ -15,6 +15,7 @@ The website combines narrative storytelling with data to shed light on:
 - The widening gap in disaster funding over the past decade.
 - The factors that drive or limit aid distribution.
 - The effect of news & media coverage on receiving aid.
+  
 Note: This study uses a curated sample of 19 major humanitarian crises from 2014-2024, selected to demonstrate funding patterns across different disaster types, regions, and income levels. This is a convenience sample for exploratory analysis, not a comprehensive dataset. It does not represent all global disasters and the patterns identified are illustrative, not definitive.
 
 ## Features
@@ -58,11 +59,16 @@ source .venv/bin/activate        # macOS/Linux
 
 4. Install Dependencies
 This app uses only standard Python libraries (no external dependencies).However, make sure you are running Python 3.7+.
+
 pip install -r requirements.txt
 
 ## Referrences
 UN OCHA FTS: https://fts.unocha.org/ 
+
 ReliefWeb: https://reliefweb.int/ 
+
 GDELT Project: https://www.gdeltproject.org/ 
+
 EM-DAT (Emergency Events Database): https://www.emdat.be/ 
+
 World Bank Open Data: https://data.worldbank.org/ 
