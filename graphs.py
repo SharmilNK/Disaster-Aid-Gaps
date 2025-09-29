@@ -5,9 +5,9 @@ global_data = pd.read_csv("global_disaster_aid_gaps/global_disaster_aid_gaps_201
 largest_abs = pd.read_csv("global_disaster_aid_gaps/top_countries_largest_absolute_gaps.csv")
 smallest_abs = pd.read_csv("global_disaster_aid_gaps/top_countries_smallest_absolute_gaps.csv")
 
-# Global Disaster Aid Gap Trend Line Graph
 global_trend = global_data.groupby("year")["gap"].sum().reset_index()
 
+# Global Disaster Aid Gap Trend Line Graph
 plt.figure(figsize=(9, 5))
 plt.plot(global_trend["year"], global_trend["gap"]/1e9, marker="o", color="steelblue", linewidth=2)
 plt.fill_between(global_trend["year"], global_trend["gap"]/1e9, alpha=0.2, color="steelblue")
